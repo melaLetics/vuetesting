@@ -1,6 +1,13 @@
 # testing
 
-> testing vue.js components
+``` bash
+!!! DO NOT AVOID TESTING BECAUSE IT JUST TAKES TOO MUC TIME
+!!! DO NOT FEAR WRITING TESTS
+
+
+* Test only output that is dynamically generated
+* Test only output that is part of the component contract (what is the purpose of the component?)
+```
 
 ## Build Setup
 
