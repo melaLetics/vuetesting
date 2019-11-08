@@ -6,10 +6,10 @@ import { mount } from '@vue/test-utils'
 import { shallowMount } from '@vue/test-utils'
 import Item from '@/components/Item.vue'
 describe('Item.vue', () => {
-  const item = {
-    description: 'Test'
-  }
   test('renders item', () => {
+    const item = {
+      description: 'Test'
+    }
     const wrapper = mount(Item, {
       propsData: { item }
     })
