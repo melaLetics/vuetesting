@@ -23,6 +23,7 @@ Form.spec.js:
     - mock an axios call
     - set input fields to test the correct processing
     - check radio buttons
+    - check selected options
 
 Item.spec.js:
     - renders given propsData

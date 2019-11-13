@@ -70,4 +70,26 @@ describe('Form.vue', () => {
       })
     )
   })
+  /*
+   ** testing select values
+   */
+  test('sends post request with selected option value on submit', () => {
+    const axios = {
+      post: jest.fn()
+    }
+    const wrapper = shallowMount(Form, {
+      mocks: {
+        axios
+      }
+    })
+    const url = 'http://demo7437963.mockable.io/validate'
+    const selectOption = wrapper.find('select').element.value
+    wrapper.find('button').trigger('submit')
+    expect(axios.post).toHaveBeenCalledWith(
+      url,
+      expect.objectContaining({
+        selected: selectOption
+      })
+    )
+  })
 })

@@ -12,6 +12,14 @@
       <label>Female</label>
       <input v-model="gender" value="female" type="radio" name="gender" />
       <br />
+      <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+      <br />
+      <br />
       <button type="submit">Submit</button>
     </form>
   </div>
@@ -20,13 +28,15 @@
 export default {
   data: () => ({
     email: null,
-    gender: 'male'
+    gender: 'male',
+    selected: ''
   }),
   methods: {
     onSubmit(event) {
       this.axios.post('http://demo7437963.mockable.io/validate', {
         email: this.email,
-        gender: this.gender
+        gender: this.gender,
+        selected: this.selected
       })
       this.$emit('form-submitted')
     }
@@ -48,7 +58,8 @@ export default {
   font-weight: bold;
 }
 .form-group input[type='radio'],
-.form-group input[type='email'] {
+.form-group input[type='email'],
+select {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
