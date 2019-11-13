@@ -1,12 +1,17 @@
 <template>
-  <item-list />
+  <div>
+    <item-list />
+    <fetched-data-list />
+  </div>
 </template>
 
 <script>
+import FetchedDataList from '../components/FetchedDataList'
 import ItemList from '~/components/ItemList.vue'
 export default {
   components: {
-    ItemList
+    ItemList,
+    FetchedDataList
   }
 }
 </script>

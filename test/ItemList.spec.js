@@ -21,12 +21,12 @@ describe('ItemList.vue', () => {
     const items = [
       {
         id: 1,
-        description: 'google',
+        title: 'google',
         url: 'https://www.google.de'
       },
       {
         id: 2,
-        description: 'twitter',
+        title: 'twitter',
         url: 'https://twitter.com'
       }
     ]
