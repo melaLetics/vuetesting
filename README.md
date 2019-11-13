@@ -7,6 +7,38 @@
 
 * Test only output that is dynamically generated
 * Test only output that is part of the component contract (what is the purpose of the component?)
+   ```
+
+## Where to find what
+``` bash
+Button.spec.js:
+    - fake timers 
+    - test a click on a button with an action changing a properties value
+    - test a function calling a blackboxed function (external function, not in this unit)
+
+FetchedDataList.spec.js (not shown via index.vue)
+    - testing/mocking asynchronous code
+     
+Form.spec.js:
+    - mock an axios call
+    - set input fields to test the correct processing
+    - check radio buttons
+
+Item.spec.js:
+    - renders given propsData
+    - renders a specific (non dynamic) text
+    - rendered component output
+    - DOM attributes
+
+ItemList.spec.js:
+    - renders a child component
+    - testing classes
+
+Modal.spec.js:
+    - renders a Vue instance
+
+index.spec.js:
+    - testing result after emitting 
 ```
 
 ## Build Setup
