@@ -2,6 +2,7 @@
   <div>
     <button @click="onClick">Click me!</button>
     <button @click="startTimer">Start Timer</button>
+    <button id="my-button" @click="startFunction">Start a Function</button>
   </div>
 </template>
 
@@ -23,6 +24,12 @@ export default {
     },
     setTimedOut() {
       this.timedOut = true
+    },
+    startFunction() {
+      /*
+       ** this function does some wild things, e.g. calls external functions we won't test.
+       */
+      return true
     }
   }
 }
