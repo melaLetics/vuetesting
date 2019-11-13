@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>Example of mocking Functions</h3>
     <button @click="onClick">Click me!</button>
     <button @click="startTimer">Start Timer</button>
     <button id="my-button" @click="startFunction">Start a Function</button>
