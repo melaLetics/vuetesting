@@ -40,6 +40,11 @@ Modal.spec.js:
 
 index.spec.js:
     - testing result after emitting 
+    
+Store.spec.js:
+    - test mutations
+    - test getters 
+    - test calling a mutation with an action
 ```
 
 ## Build Setup
