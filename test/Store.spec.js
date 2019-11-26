@@ -45,7 +45,7 @@ describe('testing the store', () => {
   /*
    **
    */
-  test('fetchListData calls commit with the result of FetchListData', async () => {
+  test('fetchListData calls commit with the result of fetchListData', async () => {
     const items = [{}, {}]
     const type = 'top'
     /*
@@ -53,8 +53,8 @@ describe('testing the store', () => {
      ** returns a resolved promise with the items if fetchListData is called with the correct type (see api/api.js);
      ** otherwise, returns an empty resolved promise
      */
-    fetchListData.mockImplementationOnce((calledWith) => {
-      return calledWith === type ? Promise.resolve(items) : Promise.resolve()
+    fetchListData.mockImplementationOnce((called) => {
+      return called === type ? Promise.resolve(items) : Promise.resolve()
     })
     /*
      ** mock a context object
