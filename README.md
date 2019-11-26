@@ -45,6 +45,14 @@ Store.spec.js:
     - test mutations
     - test getters 
     - test calling a mutation with an action
+
+StoreInstance.spec.js:
+    - test initial state, action, mutation and getters as an instance 
+    - localCopy of Vue and Vuex
+
+Login.spec.js:
+    - testing vue router with this.§router.push()
+    - testing vue router with nuxt-link
 ```
 
 ## Build Setup

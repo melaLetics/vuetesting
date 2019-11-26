@@ -9,10 +9,14 @@
     <Modal v-if="showModal" @close-modal="closeModal">
       <Form @form-submitted="closeModal" />
     </Modal>
+    <br />
+    <br />
+    <Login />
   </div>
 </template>
 
 <script>
+import Login from '../components/Login'
 import Form from '~/components/Form'
 import Modal from '~/components/Modal'
 import ItemList from '~/components/ItemList.vue'
@@ -22,7 +26,8 @@ export default {
     ItemList,
     Form,
     Modal,
-    myButton
+    myButton,
+    Login
   },
   data() {
     return {
