@@ -13,11 +13,7 @@
 </template>
 
 <script>
-import NuxtLink from '../.nuxt/components/nuxt-link.client'
 export default {
-  components: {
-    NuxtLink
-  },
   data: () => ({
     username: '',
     password: ''

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item.vue renders correctly 1`] = `
+<li
+  class="news-item"
+>
+  <span
+    class="score"
+  >
+    10
+  </span>
+   
+  <span
+    class="title"
+  >
+    <a
+      href="https://vue-test-utils.vuejs.org/"
+      rel="noopener"
+      target="_blank"
+    >
+      Testing Snapshot tests
+    </a>
+     
+    <span
+      class="host"
+    >
+       (https://vue-test-utils.vuejs.org/)
+    </span>
+  </span>
+   
+  <br />
+   
+  <!---->
+   
+  <span>
+     1546300200 
+  </span>
+</li>
+`;
+
+exports[`Item.vue renders correctly as job 1`] = `
+<li
+  class="news-item"
+>
+  <span
+    class="score"
+  >
+    10
+  </span>
+   
+  <span
+    class="title"
+  >
+    <a
+      href="https://vue-test-utils.vuejs.org/"
+      rel="noopener"
+      target="_blank"
+    >
+      Testing Snapshot tests
+    </a>
+     
+    <span
+      class="host"
+    >
+       (https://vue-test-utils.vuejs.org/)
+    </span>
+  </span>
+   
+  <br />
+   
+  <span>
+     Online since 
+  </span>
+   
+  <span>
+     1546300200 
+  </span>
+</li>
+`;

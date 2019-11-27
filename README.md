@@ -7,14 +7,31 @@
 
 * Test only output that is dynamically generated
 * Test only output that is part of the component contract (what is the purpose of the component?)
+
+- Unit tests just test singulated parts of the application. 
+  This could be a component, a page, a store or any other codeunit. If a component uses other units, mock the other ones.
+  Unit tests are very useful in Test Driven Developement (TDD). Think about what your component should cover first, 
+  write the test and only then the component.
+- Snapshot tests are something like playing a game of Spot the Differences. 
+  A failing snapshot test is a warning that tells you your component output has changed. 
+  Snapshot tests are written after you manually test a component.
+- End to end tests
+
+Found to be extremely useful: https://devhints.io/jest
+
    ```
 
 ## Where to find what
 ``` bash
+The test cases are not building a useful application!
+
 Button.spec.js:
     - fake timers 
     - test a click on a button with an action changing a properties value
     - test a function calling a blackboxed function (external function, not in this unit)
+
+Dashboard.js:
+    - renders a specific (non dynamic) text
 
 FetchedDataList.spec.js (not shown via index.vue)
     - testing/mocking asynchronous code
@@ -27,9 +44,9 @@ Form.spec.js:
 
 Item.spec.js:
     - renders given propsData
-    - renders a specific (non dynamic) text
     - rendered component output
     - DOM attributes
+    - snapshot test of a component with dynamic data in several outputs
 
 ItemList.spec.js:
     - renders a child component
@@ -53,6 +70,9 @@ StoreInstance.spec.js:
 Login.spec.js:
     - testing vue router with this.§router.push()
     - testing vue router with nuxt-link
+
+Soinner.spec.js:
+    - a snapshot test of a static component
 ```
 
 ## Build Setup

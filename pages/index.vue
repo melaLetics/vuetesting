@@ -1,9 +1,5 @@
 <template>
   <div>
-    <item-list />
-    <br />
-    <br />
-    <my-button />
     <br />
     <br />
     <Modal v-if="showModal" @close-modal="closeModal">
@@ -11,27 +7,32 @@
     </Modal>
     <br />
     <br />
-    <Login />
+    <item :key="item.id" :item="item"> </item>
   </div>
 </template>
 
 <script>
-import Login from '../components/Login'
 import Form from '~/components/Form'
 import Modal from '~/components/Modal'
-import ItemList from '~/components/ItemList.vue'
-import myButton from '~/components/Button.vue'
+import Item from '~/components/Item'
 export default {
   components: {
-    ItemList,
     Form,
     Modal,
-    myButton,
-    Login
+    Item
   },
   data() {
     return {
-      showModal: true
+      showModal: true,
+      item: {
+        by: 'melaSchick',
+        id: 1,
+        score: 10,
+        time: new Date('2019') / 1000 - 600,
+        title: 'Testing Snapshot tests',
+        type: 'story',
+        url: 'https://vue-test-utils.vuejs.org/'
+      }
     }
   },
   methods: {
