@@ -17,6 +17,10 @@
   Snapshot tests are written after you manually test a component.
 - End to end tests
 
+FOR SERVER SIDE TESTING:
+you have to yarn add -D @vue/server-test-utils
+split server-side tests and client-side tests into seperate files as you can run each test in just one environment.
+
 Found to be extremely useful: https://devhints.io/jest
 
    ```
@@ -73,6 +77,10 @@ Login.spec.js:
 
 Soinner.spec.js:
     - a snapshot test of a static component
+
+PageNotFound.server.spec:
+    - server-side rendered snapshot test
+    - server-side rendered unit test
 ```
 
 ## Build Setup
