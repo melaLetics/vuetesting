@@ -15,11 +15,18 @@
 - Snapshot tests are something like playing a game of Spot the Differences. 
   A failing snapshot test is a warning that tells you your component output has changed. 
   Snapshot tests are written after you manually test a component.
-- End to end tests
+- End-to-end tests will test the entire application by interacting with it. 
+  While unit and snapshot tests check the components and functions thar make up an application, end-to-end tests  
+  check that these components and functions work together correctly.  
 
 FOR SERVER SIDE TESTING:
-you have to yarn add -D @vue/server-test-utils
+you have to 
+$yarn add -D @vue/server-test-utils
 split server-side tests and client-side tests into seperate files as you can run each test in just one environment.
+
+FOR END-TO-END Testing:
+you have to 
+$yarn add -D nightwatch selenium-server chromedriver
 
 Found to be extremely useful: https://devhints.io/jest
 
@@ -75,12 +82,19 @@ Login.spec.js:
     - testing vue router with this.§router.push()
     - testing vue router with nuxt-link
 
-Soinner.spec.js:
+Spinner.spec.js:
     - a snapshot test of a static component
 
 PageNotFound.server.spec:
     - server-side rendered snapshot test
     - server-side rendered unit test
+
+e2e/specs/journeys.js (END-TO-END Test)
+    - waiting for rendered DOM elements
+    - assert specific static texts like title
+
+e2s/demo:
+    - demo test for testing an ecosia search 
 ```
 
 ## Build Setup
